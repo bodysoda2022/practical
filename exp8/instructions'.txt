@@ -1,0 +1,11 @@
+Get ready with pickle file
+1. Login to AWS -> Create Instance -> Name the instance -> Choose Ubuntu -> key pair to be .ppk ->
+create -> copy public dns
+2. Open WinSCP -> username as ubuntu -> password to be authentication -> security -> select the .ppk
+file and open -> Drag n Drop from windowd to ubuntu -> open putty ->
+3. Putty terminal open -> Type:
+i. sudo apt install python3-pip
+ii. sudo apt-get update && sudo apt-get install python3-pip
+iii. pip install modules
+iv. python app.py or python3 app.py
+v. screen -R deploy python3 app.py
