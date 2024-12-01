@@ -22,13 +22,9 @@ from sklearn.preprocessing import StandardScaler
 nltk.download('punkt')
 nltk.download('stopwords')
 
-"""run these lines of code one by one in terminal or CMD in vscode or computer
- 1.!kaggle datasets download -d chaudharyanshul/airline-reviews
- 2.!unzip "airline-reviews"
-"""
 
 # Load the dataset
-df = pd.read_csv('BA_AirlineReviews.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/BA_AirlineReviews.csv')
 
 # Display the first few rows of the dataset
 print(df.head())
