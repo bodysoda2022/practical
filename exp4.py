@@ -11,7 +11,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 
 # Directly load the dataset from the provided GitHub raw link
-url = "https://raw.githubusercontent.com/bodysoda2022/pract/refs/heads/main/BostonHousing.csv"
+url = "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/BostonHousing.csv"
 data = pd.read_csv(url)
 
 # Show first few rows of the data

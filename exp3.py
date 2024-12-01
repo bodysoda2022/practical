@@ -11,7 +11,7 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 from imblearn.over_sampling import SMOTE
 
 # Load the training dataset
-df = pd.read_csv("https://raw.githubusercontent.com/bodysoda2022/dataset-2024/refs/heads/main/2b.%20loan-test.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp2/2b.%20loan-test.csv")
 # Convert categorical variables to dummy variables
 df = pd.get_dummies(df)
 

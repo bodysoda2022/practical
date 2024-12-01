@@ -14,8 +14,8 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import RandomForestClassifier
 
 # Load datasets
-data_fake = pd.read_csv('Fake.csv')
-data_true = pd.read_csv('True.csv')
+data_true = pd.read_csv('https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp9/9a.%20True.csv')
+data_fake = pd.read_csv('https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp9/9b.%20Fake.csv')
 
 # Adding class column (0 for fake, 1 for true)
 data_fake["class"] = 0

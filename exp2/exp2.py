@@ -5,8 +5,8 @@ import seaborn as sns
 from scipy import stats  # For statistical analysis
 
 # URLs for the datasets
-train_url = "https://raw.githubusercontent.com/bodysoda2022/dataset-2024/refs/heads/main/2a.%20loan-train.csv"
-test_url = "https://raw.githubusercontent.com/bodysoda2022/dataset-2024/refs/heads/main/2b.%20loan-test.csv"
+train_url = "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp2/2a.%20loan-train.csv"
+test_url = "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp2/2b.%20loan-test.csv"
 
 # Directly load datasets from the URLs
 df = pd.read_csv(train_url)
