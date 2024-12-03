@@ -11,7 +11,7 @@ files = {
     "Foward kinematics 2 DOF ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/forward_kinematics_2dof.py",
     "Inverse kinematics 2 DOF ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/inverse_kinematics_2dof.py",
     "Forward kinematics 3 DOF ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/forward_kinematics_3dof.py",
-    "Inverse Kinematics 3 DOF ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/inverse_kinematics_2dof.py",
+    "Inverse Kinematics 3 DOF ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/inverse_kinematics_3dof.py",
     "Four Bar Linkage ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/four%20bar%20inkage.linkage2",
     "Pick and Place ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/pick%20and%20place.linkage2",
     "Sliding crank ": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/sliding%20cranck.linkage2",
