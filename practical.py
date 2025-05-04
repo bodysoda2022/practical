@@ -1,17 +1,16 @@
 import streamlit as st
 import requests
-import base64
 
 # Set page title and configuration
 st.set_page_config(page_title="GitHub File Downloader", layout="wide")
 
-# Add custom CSS to align download buttons to the right
+# Add custom CSS for styling
 st.markdown("""
 <style>
-.download-button {
-    text-align: right !important;
-    display: flex;
-    justify-content: flex-end;
+div.stDownloadButton > button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -22,34 +21,30 @@ st.title("GitHub File Downloader")
 # GitHub file links and titles
 # Replace these with your actual GitHub raw links and titles
 github_files = [
-    {"title": "File 1", "url": "https://raw.githubusercontent.com/username/repository/main/file1.txt"},
-    {"title": "File 2", "url": "https://raw.githubusercontent.com/username/repository/main/file2.csv"},
-    {"title": "File 3", "url": "https://raw.githubusercontent.com/username/repository/main/file3.json"},
-    {"title": "File 4", "url": "https://raw.githubusercontent.com/username/repository/main/file4.py"},
-    {"title": "File 5", "url": "https://raw.githubusercontent.com/username/repository/main/file5.md"},
-    {"title": "File 6", "url": "https://raw.githubusercontent.com/username/repository/main/file6.txt"},
-    {"title": "File 7", "url": "https://raw.githubusercontent.com/username/repository/main/file7.csv"},
-    {"title": "File 8", "url": "https://raw.githubusercontent.com/username/repository/main/file8.json"},
-    {"title": "File 9", "url": "https://raw.githubusercontent.com/username/repository/main/file9.py"},
-    {"title": "File 10", "url": "https://raw.githubusercontent.com/username/repository/main/file10.md"}
+    {"title": "Implementing frame processing methods: Serial, parallel,pipeline", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp1.py"},
+    {"title": "Implementing CNN model for classification in images.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp2.py"},
+    {"title": "Object detection and localization with YOLO or Faster RCNN", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp3.py"},
+    {"title": "Semantic Segmentation using CNN", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp4.py"},
+    {"title": "Object detection and tracking in videos using CNN.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp5.py"},
+    {"title": "Human activity detection using CNN with LSTM", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp6.py"},
+    {"title": "Language captioning using CNN, RNN and LSTM", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp7.py"},
+    {"title": "Image-to-Image Translation with Pix2Pix.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp8.py"},
+    {"title": "exp 9 illa ", "url": "https://raw.githubusercontent.com/username/repository/main/file9.py"},
+    {"title": "Generative Adversarial Networks (GANs) for Image Generation", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp10.py"}
 ]
 
 # Function to download file content from GitHub
+@st.cache_data  # Cache the function to improve performance
 def get_file_content(url):
     try:
         response = requests.get(url)
         response.raise_for_status()  # Raise an exception for HTTP errors
-        return response.content
+        return response.text
     except requests.exceptions.RequestException as e:
         st.error(f"Error fetching file: {e}")
         return None
 
-# Function to create a download link
-def get_download_link(file_content, file_name, file_label):
-    b64 = base64.b64encode(file_content).decode()
-    return f'<div class="download-button"><a href="data:application/octet-stream;base64,{b64}" download="{file_name}" class="btn">Download {file_label}</a></div>'
-
-# Display files with download buttons on the right
+# Display files with direct download buttons
 for file in github_files:
     col1, col2 = st.columns([4, 1])
     
@@ -60,14 +55,20 @@ for file in github_files:
         # Get file name from URL
         file_name = file["url"].split("/")[-1]
         
-        # Create a button to trigger download
-        if st.button(f"Download", key=file["title"]):
-            file_content = get_file_content(file["url"])
-            if file_content:
-                # Create download link
-                dl_link = get_download_link(file_content, file_name, file["title"])
-                st.markdown(dl_link, unsafe_allow_html=True)
-                st.success(f"{file['title']} download initiated!")
+        # Pre-fetch the file content
+        file_content = get_file_content(file["url"])
+        
+        if file_content is not None:
+            # Use streamlit's built-in download_button for direct download
+            st.download_button(
+                label="Download",
+                data=file_content,
+                file_name=file_name,
+                mime="text/plain",
+                key=f"download_{file['title']}",
+            )
+        else:
+            st.error("File not available")
     
     # Add a separator between files
     st.markdown("---")
@@ -75,6 +76,5 @@ for file in github_files:
 # Instructions for the user
 st.markdown("""
 ### Instructions
-1. Click the download button next to the file you want to download
-2. The file will be downloaded directly to your computer
+Simply click the download button next to the file you want to download. The file will be downloaded directly to your computer without additional steps.
 """)
