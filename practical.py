@@ -22,26 +22,16 @@ st.title("GitHub File Downloader")
 # GitHub file links and titles
 # Replace these with your actual GitHub raw links and titles
 github_files = [
-    {
-        "title": "File 1",
-        "url": "https://raw.githubusercontent.com/username/repository/main/file1.txt"
-    },
-    {
-        "title": "File 2",
-        "url": "https://raw.githubusercontent.com/username/repository/main/file2.csv"
-    },
-    {
-        "title": "File 3",
-        "url": "https://raw.githubusercontent.com/username/repository/main/file3.json"
-    },
-    {
-        "title": "File 4",
-        "url": "https://raw.githubusercontent.com/username/repository/main/file4.py"
-    },
-    {
-        "title": "File 5",
-        "url": "https://raw.githubusercontent.com/username/repository/main/file5.md"
-    }
+    {"title": "File 1", "url": "https://raw.githubusercontent.com/username/repository/main/file1.txt"},
+    {"title": "File 2", "url": "https://raw.githubusercontent.com/username/repository/main/file2.csv"},
+    {"title": "File 3", "url": "https://raw.githubusercontent.com/username/repository/main/file3.json"},
+    {"title": "File 4", "url": "https://raw.githubusercontent.com/username/repository/main/file4.py"},
+    {"title": "File 5", "url": "https://raw.githubusercontent.com/username/repository/main/file5.md"},
+    {"title": "File 6", "url": "https://raw.githubusercontent.com/username/repository/main/file6.txt"},
+    {"title": "File 7", "url": "https://raw.githubusercontent.com/username/repository/main/file7.csv"},
+    {"title": "File 8", "url": "https://raw.githubusercontent.com/username/repository/main/file8.json"},
+    {"title": "File 9", "url": "https://raw.githubusercontent.com/username/repository/main/file9.py"},
+    {"title": "File 10", "url": "https://raw.githubusercontent.com/username/repository/main/file10.md"}
 ]
 
 # Function to download file content from GitHub
