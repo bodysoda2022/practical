@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set page title and configuration
-st.set_page_config(page_title="GitHub File Downloader", layout="wide")
+st.set_page_config(page_title="DLCV practicals", layout="wide")
 
 # Add custom CSS for styling
 st.markdown("""
@@ -70,11 +70,3 @@ for file in github_files:
         else:
             st.error("File not available")
     
-    # Add a separator between files
-    st.markdown("---")
-
-# Instructions for the user
-st.markdown("""
-### Instructions
-Simply click the download button next to the file you want to download. The file will be downloaded directly to your computer without additional steps.
-""")
