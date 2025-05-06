@@ -21,16 +21,16 @@ st.title("GitHub File Downloader")
 # GitHub file links and titles
 # Replace these with your actual GitHub raw links and titles
 github_files = [
-    {"title": "Implementing frame processing methods: Serial, parallel,pipeline", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp1.ipynb"},
-    {"title": "Implementing CNN model for classification in images.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp2.ipynb"},
-    {"title": "Object detection and localization with YOLO or Faster RCNN", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp3.ipynb"},
-    {"title": "Semantic Segmentation using CNN", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp4.ipynb"},
-    {"title": "Object detection and tracking in videos using CNN.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp5.ipynb"},
-    {"title": "Human activity detection using CNN with LSTM", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp6.ipynb"},
-    {"title": "Language captioning using CNN, RNN and LSTM", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp7.ipynb"},
-    {"title": "Image-to-Image Translation with Pix2Pix.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp8.ipynb"},
-    {"title": "exp 9 illa ", "url": "https://raw.githubusercontent.com/username/repository/main/file9.py"},
-    {"title": "Generative Adversarial Networks (GANs) for Image Generation", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp10.ipynb"}
+    {"title": "Text Classification using Naïve Bayes and SVM for Sentiment Analysis", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp1.ipynb"},
+    {"title": "vBuilding a Text Categorization System using TF-IDF and KNN", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp2.ipynb"},
+    {"title": "Speech-to-Text Conversion using RNNbased Models.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp3.ipynb"},
+    {"title": "Sequence Labeling for Named Entity Recognition (NER) using LSTM.", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp4.ipynb"},
+    {"title": "Document Similarity using TF-IDF and Cosine Similarity", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp5.ipynb"},
+    {"title": "Building a Text Summarizer using BERT embedding and Extractive Summarization", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp6.ipynb"},
+    {"title": "Implementing Question Answering System using BERT-based Models", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp7.ipynb"},
+    {"title": "Text Generation for Storytelling using GPT-3 or GPT-Neo", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp8.ipynb"},
+    {"title": "Optimizing a Model for Edge Devices using Symmetric Quantization ", "url": "https://raw.githubusercontent.com/username/repository/main/file9.py"},
+    {"title": "Building an AI-based Customer Support Agent using Multi-Agent Systems", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp10.ipynb"}
 ]
 
 # Function to download file content from GitHub
