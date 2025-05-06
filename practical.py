@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set page title and configuration
-st.set_page_config(page_title="DLCV practicals", layout="wide")
+st.set_page_config(page_title="practicals", layout="wide")
 
 # Add custom CSS for styling
 st.markdown("""
@@ -16,7 +16,7 @@ div.stDownloadButton > button {
 """, unsafe_allow_html=True)
 
 # Title for the application
-st.title("GitHub File Downloader")
+st.title("NLP Praxtical")
 
 # GitHub file links and titles
 # Replace these with your actual GitHub raw links and titles
@@ -29,7 +29,7 @@ github_files = [
     {"title": "Building a Text Summarizer using BERT embedding and Extractive Summarization", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp6.ipynb"},
     {"title": "Implementing Question Answering System using BERT-based Models", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp7.ipynb"},
     {"title": "Text Generation for Storytelling using GPT-3 or GPT-Neo", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp8.ipynb"},
-    {"title": "Optimizing a Model for Edge Devices using Symmetric Quantization ", "url": "https://raw.githubusercontent.com/username/repository/main/file9.py"},
+    {"title": "Optimizing a Model for Edge Devices using Symmetric Quantization ", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp9.ipynb"},
     {"title": "Building an AI-based Customer Support Agent using Multi-Agent Systems", "url": "https://raw.githubusercontent.com/bodysoda2022/practical/refs/heads/main/exp10.ipynb"}
 ]
 
